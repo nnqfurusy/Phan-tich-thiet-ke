@@ -1,0 +1,11 @@
+# File sinh ra khi build
+build/
+dist/
+# Cau hinh rieng cua tung may (duong dan Tomcat, JDK...)
+nbproject/private/
+# NetBeans tu sinh lai
+nbproject/build-impl.xml
+nbproject/genfiles.properties
+# File rac cua he dieu hanh
+.DS_Store
+Thumbs.db
