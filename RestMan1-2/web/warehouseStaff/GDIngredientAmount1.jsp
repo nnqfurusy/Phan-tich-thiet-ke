@@ -75,7 +75,7 @@
             <table class="info" id="tblIngredient">
                 <tr><th>Nguyên liệu</th><td><%= Format1.esc(ingredient.getIngredientName()) %></td></tr>
                 <tr><th>Đơn vị tính</th><td><%= Format1.esc(ingredient.getUnit()) %></td></tr>
-                <tr><th>Số lượng còn lại</th><td><%= Format1.number(ingredient.getQuantityInStock()) %></td></tr>
+                <tr><th>Tồn kho</th><td><%= Format1.number(ingredient.getQuantityInStock()) %></td></tr>
                 <tr><th><label for="txtPrice">Đơn giá (đ)</label></th>
                     <td><input type="number" id="txtPrice" name="txtPrice" min="1" step="any" value="<%= Format1.esc(txtPrice) %>" required></td></tr>
                 <tr><th><label for="txtAmount">Số lượng cần nhập</label></th>

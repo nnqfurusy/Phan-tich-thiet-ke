@@ -91,7 +91,7 @@
             <% } else { %>
                 <table class="data" id="tblIngredient">
                     <thead>
-                    <tr><th class="center">STT</th><th>Nguyên liệu</th><th>Đơn vị tính</th><th class="num">Số lượng còn lại</th><th class="center"></th></tr>
+                    <tr><th class="center">STT</th><th>Nguyên liệu</th><th>Đơn vị tính</th><th class="num">Tồn kho</th><th class="center"></th></tr>
                     </thead>
                     <tbody>
                     <% int i = Pagination1.firstIndex(currentPage); for (Ingredient1 ing : pageList) { %>
