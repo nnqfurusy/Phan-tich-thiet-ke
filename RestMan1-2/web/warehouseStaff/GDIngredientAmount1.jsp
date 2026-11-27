@@ -31,7 +31,7 @@
         response.sendRedirect("GDIngredientSearch1.jsp");
         return;
     }
-
+    
     String txtPrice = request.getParameter("txtPrice");
     String txtAmount = request.getParameter("txtAmount");
     String error = null;

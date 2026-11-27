@@ -33,6 +33,7 @@ public class SupplierDAO1 extends DAO1 {
                     s.setAddress(rs.getString("address"));
                     s.setPhoneNumber(rs.getString("phoneNumber"));
                     s.setEmail(rs.getString("email"));
+                       s.setRepresentative(rs.getString("representative"));
                     result.add(s);
                 }
             }
@@ -46,12 +47,14 @@ public class SupplierDAO1 extends DAO1 {
      * Them nha cung cap moi
      */
     public boolean addNewSupplier(Supplier1 supplier) {
-        String sql = "INSERT INTO Supplier1 (supplierName, address, phoneNumber, email) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO Supplier1 (supplierName, address, phoneNumber, email, representative) "
+                + "VALUES (?, ?, ?, ?, ?)";
         try (PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             ps.setString(1, supplier.getSupplierName());
             ps.setString(2, supplier.getAddress());
             ps.setString(3, supplier.getPhoneNumber());
             ps.setString(4, supplier.getEmail());
+            ps.setString(5, supplier.getRepresentative());
             ps.executeUpdate();
             try (ResultSet keys = ps.getGeneratedKeys()) {
                 if (keys.next()) {

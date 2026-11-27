@@ -7,6 +7,7 @@ public class Supplier1 {
     private String address;
     private String phoneNumber;
     private String email;
+    private String representative;
 
     public Supplier1() {
     }
@@ -49,5 +50,13 @@ public class Supplier1 {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    
+    public String getRepresentative() {
+        return representative;
+    }
+
+    public void setRepresentative(String representative) {
+        this.representative = representative;
     }
 }

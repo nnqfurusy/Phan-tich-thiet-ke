@@ -8,7 +8,7 @@ public class DAO1 {
     private static final String DB_URL = "jdbc:mysql://localhost:3306/restman1"
             + "?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Ho_Chi_Minh";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = ""; // XAMPP mac dinh: root, khong mat khau
+    private static final String DB_PASSWORD = "";
 
     protected static Connection con;
 

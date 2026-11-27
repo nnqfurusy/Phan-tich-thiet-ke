@@ -14,6 +14,7 @@
     String address = request.getParameter("txtAddress");
     String phoneNumber = request.getParameter("txtPhoneNumber");
     String email = request.getParameter("txtEmail");
+    String representative = request.getParameter("txtRepresentative");    
     String error = null;
 
     if ("POST".equalsIgnoreCase(request.getMethod())) {
@@ -29,6 +30,7 @@
             supplier.setAddress(address.trim());
             supplier.setPhoneNumber(phoneNumber.trim());
             supplier.setEmail(email == null || email.trim().isEmpty() ? null : email.trim());
+            supplier.setRepresentative(representative == null || representative.trim().isEmpty() ? null : representative.trim());
             SupplierDAO1 supplierDAO = new SupplierDAO1();
             if (supplierDAO.addNewSupplier(supplier)) {
                 response.sendRedirect("GDSupplierSearch1.jsp?msg=added&txtSupplierName="
@@ -73,6 +75,10 @@
             <div class="field">
                 <label for="txtEmail">Email</label>
                 <input type="text" id="txtEmail" name="txtEmail" value="<%= Format1.esc(email) %>">
+            </div>
+            <div class="field">
+                <label for="txtRepresentative">Người đại diện</label>
+                <input type="text" id="txtRepresentative" name="txtRepresentative" value="<%= Format1.esc(representative) %>">
             </div>
             <div class="actions">
                 <a class="btn secondary" href="GDSupplierSearch1.jsp">Quay lại</a>
